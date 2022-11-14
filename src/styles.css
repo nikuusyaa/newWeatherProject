@@ -255,6 +255,7 @@ hr {
 h1 {
   text-align: center;
   color: #0b88ac;
+  text-transform: capitalize;
 }
 h5 {
   opacity: 0.6;
