@@ -310,6 +310,4 @@ h5 {
 }
 :hover.author {
   color: #0b88ac;
-  font-size: medium;
-  transition: 200ms ease-in-out;
 }
