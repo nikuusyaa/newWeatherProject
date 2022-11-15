@@ -51,20 +51,18 @@
 <i class="fa-solid fa-cloud-rain" class="rain"></i>
    </div>
      <div class="col-6" id="humidity">
-     20%
+     
    </div>
  </span>
  </div>
    <div class="col-4">
      <span class="current_degree">
       <span id="ttemp">
-     18   
+      
       </span>
      
      <span class="current_degree1">
-     <button id="celsius" class="degreebutton" >℃</button>
-     |
-     <button  id ="fahrenheit" class="degreebutton" >°F</button>
+     
      </span>
      </span>
    </div>
@@ -74,7 +72,7 @@
 <i class="fa-solid fa-wind"></i>
    </div>
      <div class="col-6" id="wind">
-     2 m/h 
+     
    </div>
  </span>
    </div>
@@ -238,14 +236,15 @@ function changeCity(event){
   let ccity=document.querySelector("#mainCity");
    let CITY=ccity.value;
 kh.innerHTML=CITY;
-
+ 
 
 function displayWeather(response){
 let currentTemp = document.querySelector("#ttemp");
   let temperature = Math.round(response.data.main.temp);
+   
   currentTemp.innerHTML=`${temperature}℃ `;
   let currentWindSpeed=document.querySelector("#wind");
-  let wind= response.data.wind.speed;
+  let wind= Math.round(response.data.wind.speed);
   currentWindSpeed.innerHTML=` ${wind} km/h `;
   let currentHumidity= document.querySelector("#humidity");
   let humidity=response.data.main.humidity;
@@ -261,26 +260,6 @@ axios.get(url).then(displayWeather);
 
 let city= document.querySelector("form");
 city.addEventListener("submit", changeCity);
-
-
-function changeDegree(){
-  event.preventDefault();
-  ttemp.innerHTML= currentTemp;
-}
-let md=document.querySelector("#celsius");
-md.addEventListener("click", changeDegree)
-function changeDegree2(){
-  event.preventDefault();
-  ttemp.innerHTML="64°F";
-  
-}
-let md2=document.querySelector("#fahrenheit");
-md2.addEventListener("click", changeDegree2)
-
-
-
-
-
 
     </script>
   </body>
