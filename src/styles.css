@@ -311,3 +311,12 @@ h5 {
 :hover.author {
   color: #0b88ac;
 }
+.final {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.forecast_design {
+  color: #0e6c71;
+  font-weight: bolder;
+}
